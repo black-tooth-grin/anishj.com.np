@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunix Terminull</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* This is the key to prevent scrolling */
+        }
+        body {
+            background-color: #0d0d0d;
+            color: #00ff00;
+            font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 1.5vh; /* Adjust font size based on viewport height */
+            padding: 2vh; /* Use viewport units for padding */
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .neofetch-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 2vh; /* Spacing below the neofetch block */
+        }
+
+        .ascii-art {
+            color: #00ffff; /* Cyan */
+            white-space: pre;
+            font-size: 1.5vh; /* Ensure consistent font size */
+        }
+
+        .info-block {
+            line-height: 1.5;
+        }
+        
+        .info-line {
+            display: flex;
+            gap: 10px;
+        }
+
+        .info-label {
+            color: #00ffff;
+            font-weight: bold;
+        }
+
+        .info-value {
+            color: #fff;
+        }
+
+        .neofetch-title {
+            color: #ff00ff;
+            font-weight: bold;
+        }
+        
+        .prompt {
+            color: #00ff00;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .username {
+            color: #ff00ff;
+        }
+
+        .hostname {
+            color: #00ffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="neofetch-container">
+        <div class="ascii-art">
+            <span style="color:#00ffff;">
+                        ⠀              ⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀⠀⠆⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣧⠀⠀⠠⠀⠀⠀⠐⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠀⠀⠀⠀
+⠀⠀⠀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠠⠀⠀⢀⠀⠡⠄⠀⡄⠀⠀⠤⠄⠀⢠⣿⣿⣿⣿⣿⣆⠀⢠⠤⠁⠀⠠⠀⠠⠌⠀⠁⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⢠⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠄⠀⠀⠀⠀⠠⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠈⠀⠀⠀⠀
+⠀⠀⠀⠀⠇⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀⠀⠀⠀⠐⠀⡀⢀⠀⠃⠀⢀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⡌⠀⡀⠀⠸⠀⠀⢀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠘⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⡄⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠁⠀⢀⠀⠀⠈⠀⠁⠀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀
+⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠁⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⡀⠀⡀⠀⠠⠀⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠃⠀⠀⠀⠀⠀⠀⠸⠀⠀⠀⠘⠀⠀⠠⠀⠀⠀⠀⠇⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠸⠀⠀⠀⠀⠀⠀⠀⠃⠀⠀⠀⠃⠀⠀⠀⠀⠀⠀⠸⠀⠀⠀⠀
+⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠁⠀⠀⡄⠰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⢠⠀⠀⠘⠀⠁⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⢠⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡀⠈⠛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠠⠀⡄⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠈⠀⠀⠀⠀
+⠀⠀⠀⠀⠇⠀⠀⡀⠀⠀⠀⡐⠀⠀⡀⠀⡀⠀⠐⠀⡀⠀⢠⣿⣿⣷⣤⡀⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⢀⠀⡀⠀⢀⠆⠀⠀⠀⢀⠀⠀⠀⢀⠀⠀⠸⠀⠀⠀⠀
+⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⢠⠀⠁⢠⣿⣿⣿⣿⣿⣿⣷⣦⣍⡻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠈⠀⠁⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⢠⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠈⠀⠀⠈⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠁⠀⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠀⠀⠀⠀
+⠀⠀⠀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀
+⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⡀⠀⠀⠀⠀⠀⠀⠀⠰⠀⠀⢀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀
+⠀⠀⠀⠀⡄⠀⠀⠀⠀⠀⠀⠠⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀
+⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⢀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠋⠉⠉⠉⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠠⠀⡀⠀⠀⠀⠘⠀⠀⢀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠃⠀⠀⠄⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⢀⠀⠀⠈⠀⠀⠀⠀
+⠀⠀⠀⠀⠆⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠉⠀⠆⠀⠀⠀⠀⠀⠀⢀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡈⠁⠀⠀⠀⠀⠀⠰⠀⠀⠀⠀
+⠀⠀⠀⠀⡄⠀⠀⠁⠈⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠄⠀⠀⡀⠀⠀⠁⠀⠀⠀⢠⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠄⠀⠘⠀⠀⢠⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠂⢀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣺⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠂⢠⠀⠀⠈⠀⠀⠀⠀
+⠀⠀⠀⠀⡆⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⢠⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣦⠉⠛⠛⣿⣷⡄⠀⠀⠀⠐⠀⠀⠀⠀
+⠀⠀⠀⠀⡀⠀⡀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⣀⡈⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠫⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⠈⠉⠳⠼⢀⠀⢀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⠠⠀⠀⠈⠀⠀⠀⠀
+⠀⠀⠀⠀⠆⢁⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⡿⠿⠛⠋⠀⠀⠀⠀⠄⠀⠀⠀⠀⠀⠀⠐⠀⠘⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡈⠱⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠉⠁⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⢀⠀⠀⠈⠉⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠄⠀⠀⠀
+⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⡉⠀⠀⠀⠐⠀⠄⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠈⠀⠀⠰⠀⡄⠀⠀⠀⠉⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⡄⠂⠀⠀
+⠀⠀⢠⣿⣿⣿⣿⣿⠟⠛⢁⡠⠀⠀⡀⠀⡀⠀⠐⠀⡀⢀⠀⠆⠀⢀⠀⢀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠠⠀⡀⠀⠰⡀⠀⢀⠀⡀⠀⠀⠆⢀⠀⠀⢀⡈⠙⠻⢿⣿⣿⣿⣿⡆⠀⠀
+⠀⣰⣿⣿⠟⠋⠁⠀⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⡄⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⢀⠀⠀⠈⠀⠁⠀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠐⠈⠛⠻⣿⣿⣆⠀
+⡰⠟⠉⠁⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠀⠀⠀⠀⠉⠻⢆
+            </span>
+        </div>
+        <div class="info-block">
+            <span class="neofetch-title">aj<span style="color: #fff;">@</span>lunix</span>
+            <hr style="border: 1px solid #00ff00; margin: 0; width: 100%;">
+            <br>
+            <div class="info-line">
+                <span class="info-label">OS:</span>
+                <span class="info-value">Lunix</span>
+            </div>
+            <div class="info-line">
+                <span class="info-label">Host:</span>
+                <span class="info-value">Kompitor</span>
+            </div>
+            <div class="info-line">
+                <span class="info-label">Kernel:</span>
+                <span class="info-value">6.6.6-hardened</span>
+            </div>
+            <div class="info-line">
+                <span class="info-label">Uptime:</span>
+                <span class="info-value">Always On</span>
+            </div>
+            <div class="info-line">
+                <span class="info-label">Shell:</span>
+                <span class="info-value">bush</span>
+            </div>
+            <div class="info-line">
+                <span class="info-label">Terminal:</span>
+                <span class="info-value">alakrito</span>
+            </div>
+            <div class="info-line">
+                <span class="info-label">Packages:</span>
+                <span class="info-value">69 (pacnam)</span>
+            </div>
+            <div class="info-line">
+                <span class="info-label">CPU:</span>
+                <span class="info-value">ADM Raizen 9 6900 (16) @ 4.20 GHz</span> 
+            </div>
+            <div class="info-line">
+                <span class="info-label">GPU:</span>
+                <span class="info-value">NVIDEO GFors RXT 6090 </span>
+            </div>
+            <div class="info-line">
+                <span class="info-label">Memory:</span>
+                <span class="info-value">0.1 GiB / 64 GiB</span>
+            </div>
+            <div class="info-line">
+                <span class="info-label">IP (wlan0):</span>
+                <span class="info-value">129.186.1.1</span>
+            </div>
+            <div class="info-line">
+                <span class="info-label">Locale:</span>
+                <span class="info-value">en_US.UTF-8</span>
+            </div>        
+        </div>
+    </div>
+    
+    <br>
+
+    <p class="prompt"><span class="username">aj</span><span style="color:#fff;">@</span><span class="hostname">lunix</span>:~<span style="color:#fff;">$</span> echo "Hello old"</p>
+    <p class="prompt">Hello old</p>
+    <br>
+    <p class="prompt"><span class="username">aj</span><span style="color:#fff;">@</span><span class="hostname">lunix</span>:~<span style="color:#fff;">$</span></p>
+
+</div>
+</body>
+</html>
