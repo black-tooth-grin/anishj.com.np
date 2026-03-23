@@ -480,7 +480,7 @@
     function addLine(text, isCmd = false) {
         const d = document.createElement('div');
         d.className = 'line';
-        d.innerHTML = isCmd ? `<span class="prompt-text"><span class="user">aj</span>@arch <span style="color:#fff">~ $</span></span> <span style="color:#fff">${text}</span>` : text;
+        d.innerHTML = isCmd ? `<span class="prompt-text"><span class="user">aj</span>@linux <span style="color:#fff">~ $</span></span> <span style="color:#fff">${text}</span>` : text;
         history.appendChild(d);
         terminal.scrollTop = terminal.scrollHeight;
     }
